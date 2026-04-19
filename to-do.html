@@ -1,0 +1,19 @@
+<p>to-do works!</p>
+<h1> User DashBoard</h1>
+
+<button (click)="makeUser()">User</button>
+<button (click)="makeAdmin()">Admin</button>
+
+@if (role() === 'admin'){
+    <p>Welcome Admin</p>
+} @else {
+    <p>Normal User</p>
+}
+
+<h3>Available Features</h3>
+
+<ul>
+    @for (feature of features(); track $index) {
+        <li>{{ feature }}</li>
+    }
+</ul>
